@@ -1,0 +1,296 @@
+.popup-edit {
+  display: none;
+}
+
+.popup-edit-opened {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.popup-edit__container {
+  display: block;
+  position: fixed;
+  width: 430px;
+  height: 272px;
+  border: 1px;
+  border-radius: 8px;
+  background-color: #fff;
+  top: 200px;
+  left: 210px;
+}
+
+.popup-edit__form {
+  padding-top: 15px;
+}
+
+.popup-edit__icon {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  left: 640px;
+  top: 165px;
+}
+
+input {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid darkgray;
+  width: 285px;
+  padding-bottom: 5px;
+}
+
+.popup-edit__title {
+  width: 330px;
+  height: 23px;
+  margin: 40px auto;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
+  color: #000;
+}
+
+.popup-edit__description-link {
+  max-width: 358px;
+  margin: 0;
+}
+
+.popup-edit__button {
+  width: 320px;
+  height: 50px;
+  top: 410px;
+  left: 461px;
+  border-radius: 2px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.78px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.popup-edit__button_disabled{
+  background-color: #fff;
+  color: darkgrey;
+  border: 1px solid darkgray;
+}
+
+@media screen and (max-width:2800px) {
+
+  .popup-edit__icon {
+    left: 1450px;
+    top: 160px;
+  }
+
+  .popup-edit__container {
+    left: 1015px;
+    top: 200px;
+  }
+}
+
+@media screen and (max-width:2300px) {
+
+  .popup-edit__icon {
+    left: 1350px;
+    top: 160px;
+  }
+
+  .popup-edit__container {
+    left: 915px;
+    top: 200px;
+  }
+
+}
+
+
+@media screen and (max-width:1650px) {
+
+  .popup-edit__icon {
+    left: 1050px;
+    top: 160px;
+  }
+
+  .popup-edit__container {
+    left: 620px;
+    top: 200px;
+  }
+
+}
+
+@media screen and (max-width:1280px) {
+
+  .popup-edit__icon {
+    left: 840px;
+    top: 160px;
+  }
+
+  .popup-edit__container {
+    left: 410px;
+    top: 200px;
+  }
+
+}
+
+@media screen and (max-width:1000px) {
+
+  .popup-edit__icon {
+    left: 720px;
+    top: 160px;
+  }
+
+  .popup-edit__container {
+    left: 290px;
+    top: 200px;
+  }
+
+}
+
+
+
+@media screen and (max-width:600px) {
+  .popup-edit {
+    width: 100%;
+    height: 1070px;
+    top: 10px;
+    left: 0;
+  }
+
+  .popup-edit__description-link {
+    width: 290px;
+    height: 27px;
+    border: none;
+    border-bottom: 1px solid #a9a9a9;
+    margin: 20px auto;
+  }
+
+  .popup-edit__icon {
+    left: 398px;
+    top: 63px;
+  }
+
+  .popup-edit__container {
+    left: 100px;
+    top: 100px;
+    width: 300px;
+  }
+
+  .popup-edit__title {
+    width: 310px;
+    padding-left: 12px;
+  }
+
+  .popup-edit__button {
+    max-width: 95%;
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .popup-edit {
+    width: 100%;
+    height: 2200px;
+    top: 10px;
+    left: 0;
+  }
+
+  .popup-edit__icon {
+    left: 485px;
+    top: 60px;
+  }
+
+  .popup-edit__container {
+    left: 60px;
+    top: 100px;
+  }
+
+  .popup-edit__title {
+    width: 310px;
+    padding-left: 12px;
+  }
+
+  .popup-edit__button {
+    max-width: 95%;
+  }
+}
+
+
+@media screen and (max-width:400px) {
+  .popup-edit {
+    width: 100%;
+    height: 1070px;
+    top: 10px;
+    left: 0;
+  }
+
+  .popup-edit__description-link {
+    width: 290px;
+    height: 27px;
+    border: none;
+    border-bottom: 1px solid #a9a9a9;
+    margin: 20px auto;
+  }
+
+  .popup-edit__icon {
+    left: 185px;
+    top: 60px;
+  }
+
+  .popup-edit__container {
+    left: 60px;
+    top: 100px;
+    width: 300px;
+  }
+
+  .popup-edit__title {
+    width: 310px;
+    padding-left: 12px;
+  }
+
+  .popup-edit__button {
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .popup-edit {
+    width: 100%;
+    height: 1070px;
+    top: 10px;
+    left: 0;
+  }
+
+  .popup-edit__description-link {
+    width: 290px;
+    height: 27px;
+    border: none;
+    border-bottom: 1px solid #a9a9a9;
+    margin: 20px auto;
+  }
+
+  .popup-edit__icon {
+    left: 145px;
+    top: 58px;
+  }
+
+  .popup-edit__container {
+    left: 9px;
+    top: 100px;
+    width: 300px;
+  }
+
+  .popup-edit__title {
+    width: 310px;
+    padding-left: 12px;
+  }
+
+  .popup-edit__button {
+    max-width: 95%;
+  }
+}

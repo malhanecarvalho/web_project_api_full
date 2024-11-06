@@ -1,0 +1,129 @@
+.signin {
+    max-width: 1280px;
+    height: 720px;
+    margin: 0 auto;
+    border: 1px;
+    background-color: #000;
+}
+
+.signin__header {
+    max-width: 880px;
+    padding-top: 45px;
+    margin: 0 auto;
+    border: 1px;
+}
+
+.signin__logo {
+    width: 173px;
+    height: 33px;
+    margin: 0;
+}
+
+.signin__linha {
+    max-width: 880px;
+    padding-top: 60px;
+    border: 1px;
+    opacity: 70%;
+}
+
+.signin__title {
+    max-width: 358px;
+    max-height: 29px;
+    padding-top: 55px;
+    color: #fff;
+    font-family: "inter", sans-serif;
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 29.05px;
+    margin: auto;
+    text-align: center;
+}
+
+.signin__form {
+    max-width: 358px;
+    height: 100px;
+    margin: auto;
+    padding-top: 45px;
+}
+
+.signin__form-display {
+    max-width: 358px;
+    height: 60px;
+    margin: auto;
+}
+
+.signin__input_type_error {
+    border-bottom: 1px solid red;
+}
+
+.signin__span-message {
+    font-size: 10px;
+    color: red;
+}
+
+input {
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid darkgrey;
+}
+
+.signin__email {
+    width: 100%;
+    height: 27px;
+    font-family: "inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.signin__password {
+    width: 100%;
+    height: 27px;
+    font-family: "inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.signin__button:hover {
+    opacity: 50%;
+}
+
+.signin__button {
+    margin: 170px auto 0;
+    width: 365px;
+    height: 58px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 2px;
+    font-family: "inter", sans-serif;
+    font-size: 18px;
+    line-height: 21, 78px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.signin__link:hover {
+    opacity: 60%;
+}
+
+.signin__link {
+    width: 365px;
+    height: 17px;
+    font-family: "inter", sans-serif;
+    font-size: 12px;
+    line-height: 16, 94px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    padding-top: 8px;
+}
+

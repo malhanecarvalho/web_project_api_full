@@ -1,0 +1,180 @@
+.cards {
+  box-sizing: border-box;
+  max-width: 880px;
+  min-height: 720px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(2, 2fr);
+  column-gap: 15px;
+  row-gap: 15px;
+  padding: 0;
+}
+
+.cards__container {
+  max-width: 282px;
+  max-height: 361px;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  position: relative;
+}
+
+.cards__image {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px;
+  border-bottom: 65px solid #fff;
+}
+
+.cards__button-img {
+  position: absolute;
+  top: 40px;
+  width: 282px;
+  height: 239px;
+  background-color: unset;
+  border: none;
+}
+
+.cards__title {
+  max-width: 246px;
+  height: 29px;
+  position: absolute;
+  bottom: 0;
+  left: 13px;
+  font-family: "inter", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29px;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.cards__icon-like {
+  width: 21px;
+  height: 19px;
+  position: absolute;
+  bottom: 25px;
+  right: 12px;
+  background-image: url(../images/heart-icon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: unset;
+}
+
+.cards__icon-like-active {
+  background-image: url(../images/heart-full-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cards__icon-like-remove {
+  background-image: url(../images/heart-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cards__icon-like_count {
+  color: black;
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 400;
+  position: absolute;
+  left: 255px;
+  top: 329px;
+}
+
+.cards__icon-trash {
+ display: none;
+}
+
+.cards__icon-trash-visible {
+  display: block;
+  width: 18px;
+  height: 20px;
+  position: absolute;
+  top: 18px;
+  left: 250px;
+  background-image: url(../images/trash.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: unset;
+  border: none;
+  visibility: visible;
+}
+
+.card__icon-trash-hidden{
+ display: none;
+
+}
+
+@media screen and (max-width:880px) {
+  .cards {
+    max-width: 590px;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(3, 2fr);
+    column-gap: 0;
+    overflow: auto;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .cards {
+    max-width: 590px;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(3, 2fr);
+    column-gap: 0;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .cards {
+    max-width: 590px;
+    height: 642px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .cards {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0 0;
+
+  }
+
+  .cards__container {
+    width: 100%;
+  }
+
+  .cards__image {
+    width: 100%;
+    height: 282px;
+    border-bottom: 55px solid #fff;
+  }
+
+  .cards__title {
+    max-width: 240px;
+    font-size: 21px;
+  }
+
+  .cards__icon {
+    width: 20px;
+    height: 18px;
+    right: 30px;
+    bottom: 17px;
+  }
+}

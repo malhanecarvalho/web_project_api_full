@@ -1,0 +1,168 @@
+.popup-delete {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-delete-opened {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-delete__itens {
+  width: 430px;
+  height: 181px;
+  position: fixed;
+  z-index: 1;
+  border-radius: 8px;
+  background: #fff;
+  left: 415px;
+  top: 395px;
+}
+
+
+.popup-delete__title {
+  width: 358px;
+  height: 23px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
+  color: #000000;
+  margin: 30px 35px;
+}
+
+.popup-delete__button:hover {
+  opacity: 50%;
+}
+
+.popup-delete__button {
+  width: 358px;
+  height: 50px;
+  border: none;
+  border-radius: 2px 0px 0px 0px;
+  background-color: #000;
+  margin: 10px 35px;
+  color: white;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.78px;
+  text-align: center;
+  transition: opacity 200ms ease-in-out;
+}
+
+.popup-delete__icon:hover {
+  opacity: 50%;
+}
+
+.popup-delete__icon {
+  position: absolute;
+  max-width: 40px;
+  max-height: 40px;
+  bottom: 179px;
+  left: 430px;
+
+}
+
+@media screen and (max-width:2500px) {
+  .popup-delete__itens {
+    left: 1000px;
+  }
+}
+
+@media screen and (max-width:2182px) {
+  .popup-delete__itens {
+    left: 855px;
+  }
+}
+
+@media screen and (max-width:1500px) {
+  .popup-delete__itens {
+    left: 500px;
+  }
+}
+
+@media screen and (max-width:1422px) {
+  .popup-delete__itens {
+    left: 440px;
+  }
+}
+
+@media screen and (max-width:1100px) {
+  .popup-delete__itens {
+    left: 335px;
+  }
+}
+
+@media screen and (max-width:872px) {
+  .popup-delete__itens {
+    left: 230px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .popup-delete__itens {
+    left: 150px;
+    top: 200px;
+  }
+}
+
+@media screen and (max-width:545px) {
+  .popup-delete__itens {
+    left: 60px;
+    top: 140px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .popup-delete__itens {
+    width: 90%;
+    left: 12px;
+    top: 140px;
+  }
+
+  .popup-delete__title {
+    width: 100%;
+    padding-top: 12px;
+  }
+
+  .popup-delete__button {
+    width: 75%;
+  }
+
+  .popup-delete__icon {
+    bottom: 190px;
+    left: 130px;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .popup-delete__itens {
+    width: 90%;
+    left: 20px;
+    top: 140px;
+  }
+
+  .popup-delete__title {
+    width: 75%;
+    text-align: center;
+  }
+
+  .popup-delete__button {
+    width: 75%;
+  }
+
+  .popup-delete__icon {
+    bottom: 190px;
+    left: 160px;
+  }
+
+}

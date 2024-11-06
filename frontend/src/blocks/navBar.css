@@ -1,0 +1,40 @@
+.menu {
+    position: relative;
+    bottom: 75px;
+    font-family: "inter", sans-serif;
+    display: flex;
+    justify-content: end;
+}
+
+.menu__item:hover{
+    opacity: 60%;
+}
+
+.menu__item {
+    width: 103px;
+    height: 22px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: right; 
+}
+
+.menu__item:last-of-type {
+    margin-right: 0;
+}
+
+.menu__item_active {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.menu__button{
+    border: none;
+    background-color: unset;
+}

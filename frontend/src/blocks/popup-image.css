@@ -1,0 +1,166 @@
+.popup-img {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-img-opened {
+  width: 1280px;
+  display: block;
+  position: fixed;
+  top: 105px;
+  z-index: 1;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  opacity: 1;
+  margin: auto;
+
+}
+
+.popup-img__container {
+  max-width: 433px;
+  max-height: 600px;
+  margin: 200px auto;
+  opacity: 1;
+}
+
+.popup-img__icon {
+  position: absolute;
+  top: 165px;
+  right: 365px;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.popup-img__photo {
+  width: 100%;
+  height: 540px;
+}
+
+.popup-img__title {
+  width: 291px;
+  height: 12px;
+  font-family: "inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #fff;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .popup-img {
+    width: 100%;
+  }
+
+  .popup-img__container {
+    width: 75%;
+  }
+
+  .popup-img__photo {
+    width: 100%;
+  }
+
+  .popup-img__icon {
+    right: 165px;
+    top: 165px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .popup-img__icon {
+    right: 125px;
+    top: 165px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .popup-img {
+    width: 100%;
+  }
+
+  .popup-img__container {
+    width: 75%;
+  }
+
+  .popup-img__photo {
+    width: 100%;
+  }
+
+  .popup-img__icon {
+    right: 98px;
+    top: 158px;
+  }
+}
+
+
+@media screen and (max-width: 699px) {
+  .popup-img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .popup-img__container {
+    width: 75%;
+    padding: 0;
+  }
+
+  .popup-img__photo {
+    width: 100%;
+    height: 410px;
+  }
+
+  .popup-img__icon {
+    position: fixed;
+    top: 318px;
+    right: 35px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .popup-img {
+    width: 100%;
+  }
+
+  .popup-img__container {
+    width: 75%;
+    height: 320px;
+    padding: 0;
+  }
+
+  .popup-img__photo {
+    width: 100%;
+    height: 299px;
+  }
+
+  .popup-img__icon {
+    position: fixed;
+    top: 290px;
+    right: 10px;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .popup-img {
+    width: 100%;
+  }
+
+  .popup-img__container {
+    width: 75%;
+    height: 320px;
+    padding: 0;
+  }
+
+  .popup-img__photo {
+    width: 100%;
+    height: 299px;
+  }
+
+  .popup-img__icon {
+    position: fixed;
+    top: 290px;
+    right: 10px;
+  }
+}
