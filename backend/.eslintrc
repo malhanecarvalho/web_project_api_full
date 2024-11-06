@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    "eqeqeq": "off",
+    "no-unused-expressions": "error",
+      "no-console": "off",
+      "no-restricted-syntax": [
+          "error",
+          {
+              "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+              "message": "Unexpected property on console object was called"
+          }
+      ]
+  }
+}
+
