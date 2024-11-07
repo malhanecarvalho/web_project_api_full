@@ -10,11 +10,16 @@ const routerCards = require("./routes/cards");
 const routerAuth = require("./routes/auth");
 const bodyParser = require('body-parser');
 
-
 async function connectMongoose() {
   await mongoose.connect("mongodb://localhost:27017/aroundb", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   });
-  console.log("mongoose conected")
+  try {
+    console.log('Conexão com o MongoDB estabelecida com sucesso!');
+  } catch (error) {
+    console.error('Erro ao conectar ao MongoDB:', error);
+  };
 };
 
 const { PORT = 3000 } = process.env;
@@ -40,6 +45,14 @@ app.get('/crash-test', () => {
 });
 
 app.use("/", routerAuth);
+
+app.get('/', (req, res) => {
+  res.send('Bem-vindo à API do Projeto Around da TripleTen');
+});
+
+app.use((req, res) => {
+  res.status(404).json({ message: 'A solicitação não foi encontrada' });
+});
 
 app.use(errorLogger);
 
