@@ -2,7 +2,9 @@
 
 ![Screenshot do Projeto](./frontend/src/images/screenshot.png)
 
-A **Photo Card App** é uma aplicação full-stack que permite aos usuários criar, visualizar e interagir com cards de fotos. Cada card pode conter uma imagem, título, oferecendo uma maneira intuitiva e dinâmica de descobrir fotos. A aplicação conta com um sistema de autenticação, permitindo que os usuários se registrem, façam login e interajam com os cards criados por outros usuários.
+
+
+A **Photo Card App** é uma aplicação full-stack que permite aos usuários criar, visualizar e interagir com cards de fotos. Cada card pode conter uma imagem, título e curtidas oferecendo uma maneira intuitiva e dinâmica de descobrir fotos. A aplicação conta com um sistema de autenticação, permitindo que os usuários se registrem, façam login e interajam com os cards criados por outros usuários.
 
 ## **Tecnologias Utilizadas**
 
@@ -24,13 +26,13 @@ A **Photo Card App** é uma aplicação full-stack que permite aos usuários cri
   - Cadastro de novos usuários com validação de dados.
   - Login seguro com token JWT.
 
-- **Criação e Gerenciamento de Cards:**
+- **Criação e Gerenciamento de Cards e usuário:**
   - Upload de imagens para criar cards personalizados.
-  - Edição e exclusão de cards.
+  - Edição de perfil e exclusão de cards.
   - Visualização de cards criados por outros usuários.
 
 - **Interação com Cards:**
-  - Curtir cards de outros usuários.
+  - Curtir e descurtir seus cards e de outros usuários.
 
 - **Responsividade:**
   - Design responsivo, adaptável a diferentes dispositivos (desktop, tablet e celular).
@@ -41,34 +43,46 @@ Para rodar a aplicação localmente, siga as etapas abaixo:
 
 1. Clone este repositório:
 
+   ```bash
    git clone https://github.com/malhanecarvalho/web_project_api_full.git
+   ```
 
 2. Instale as dependências do servidor (backend):
 
+   ```bash
    cd backend
    npm install
+   ```
 
 3. Instale as dependências do frontend:
 
+   ```bash
    cd frontend
    npm install
+   ```
 
 4. Configure as variáveis de ambiente. Crie um arquivo `.env` na pasta `backend` e adicione as seguintes variáveis:
 
+   ```bash
    MONGO_URI=your_mongo_database_uri
    JWT_SECRET=your_jwt_secret_key
+   ```
 
 5. Inicie o servidor e o frontend:
 
    - No backend:
 
+     ```bash
      cd backend
      npm start
+     ```
 
    - No frontend:
 
+     ```bash
      cd frontend
      npm start
+     ```
 
 6. Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000) para ver a aplicação em execução.
 
@@ -82,12 +96,9 @@ Se você deseja contribuir com melhorias ou corrigir problemas, siga os passos a
 4. Envie sua branch para o repositório remoto: `git push origin nome-da-feature`.
 5. Abra um pull request.
 
-## **Licença**
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 ## **Contato**
 
-Se você tiver dúvidas ou sugestões, sinta-se à vontade para abrir uma *issue* ou enviar um e-mail para: [malhanestudent@gmail.com](malhanestudent@gmail.com).
+Se você tiver dúvidas ou sugestões, sinta-se à vontade para abrir uma *issue* ou enviar um e-mail para:[malhanestudent@gmail.com](malhanestudent@gmail.com).
 
 ---
+
