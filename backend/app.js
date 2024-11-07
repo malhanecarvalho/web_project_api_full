@@ -32,6 +32,13 @@ app.use(requestLogger);
 
 app.use("/cards", routerCards);
 app.use("/users", routerUser);
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('O servidor travará agora');
+  }, 0);
+});
+
 app.use("/", routerAuth);
 
 app.use(errorLogger);
