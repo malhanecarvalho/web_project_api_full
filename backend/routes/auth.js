@@ -1,9 +1,7 @@
 const routerAuth = require("express").Router();
 const { celebrate, Joi } = require('celebrate');
-const auth = require('../middleware/auth');
 
 const {
-    getCurrentUser,
     createUsers,
     login 
   } = require("../controllers/userControllers");
@@ -24,7 +22,5 @@ const {
       avatar: Joi.string().optional().uri(),
     })
   }), createUsers);
-
-  //routerAuth.get("users/me/:_id", auth, getCurrentUser);
 
   module.exports = routerAuth;
