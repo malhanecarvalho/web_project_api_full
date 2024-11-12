@@ -8,7 +8,7 @@ export const CurrentCardProvider = ({ children }) => {
   const userId = localStorage.getItem("userId");
 
   const api = new Api({
-    baseUrl: "http://localhost:3000",
+    baseUrl: "http://localhost:3001",
     token: `${isToken}`,
     id: `${userId}`
   });
