@@ -10,6 +10,9 @@ const routerCards = require("./routes/cards");
 const routerAuth = require("./routes/auth");
 const bodyParser = require('body-parser');
 
+app.use(cors());
+app.options('*', cors());
+
 async function connectMongoose() {
   await mongoose.connect("mongodb://localhost:27017/aroundb", {
     useNewUrlParser: true,
@@ -25,10 +28,7 @@ async function connectMongoose() {
 const { PORT = 3000 } = process.env;
 
 const app = express();
-connectMongoose()
-
-app.use(cors());
-app.options('*', cors());
+connectMongoose();
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
