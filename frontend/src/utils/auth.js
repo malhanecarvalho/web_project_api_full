@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "https://api.kirakira.strangled.net/api";
 
 export const register = async ({ email, password }) => {
   return fetch(`${BASE_URL}/signup`, {
