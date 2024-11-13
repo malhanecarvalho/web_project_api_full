@@ -10,6 +10,7 @@ const routerCards = require("./routes/cards");
 const routerAuth = require("./routes/auth");
 const bodyParser = require('body-parser');
 
+const app = express();
 app.use(cors());
 app.options('*', cors());
 
@@ -27,7 +28,7 @@ async function connectMongoose() {
 
 const { PORT = 3001 } = process.env;
 
-const app = express();
+
 connectMongoose();
 
 app.use(express.json());
