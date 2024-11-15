@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
   const { authorization } = req.headers;
 
   if (!authorization || !authorization.startsWith('Bearer ')) {
-    throw new UnauthorizedError({ statusCode: 401, message: 'Autorização necessária' });
+    throw new UnauthorizedError({ statusCode: 401, message: 'Autorização ainda é necessária' });
   }
 
   const token = extractBearerToken(authorization);
@@ -19,7 +19,7 @@ module.exports = (req, res, next) => {
   try {
     payload = jwt.verify(token, JWT_SECRET);
   } catch (err) {
-    throw new UnauthorizedError({ statusCode: 401, message: 'Autorização necessária' });
+    throw new UnauthorizedError({ statusCode: 401, message: 'Autorização ainda é necessária' });
   }
   req.user = payload; 
 
