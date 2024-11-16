@@ -8,7 +8,7 @@ export const CurrentCardProvider = ({ children }) => {
   const userId = localStorage.getItem("userId");
 
   const api = new Api({
-    baseUrl: "http://localhost:3000",
+    baseUrl: "https://api.kirakira.strangled.net",
     token: `${isToken}`,
     id: `${userId}`
   });

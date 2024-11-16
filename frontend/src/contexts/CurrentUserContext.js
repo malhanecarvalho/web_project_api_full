@@ -8,7 +8,7 @@ export const CurrentUserProvider = ({ children }) => {
   const userId = localStorage.getItem("userId");
 
   const api = new Api({
-    baseUrl: "http://localhost:3000",
+    baseUrl: "https://api.kirakira.strangled.net",
     token: `${isToken}`,
     id: `${userId}`
   });
@@ -114,7 +114,7 @@ export const CurrentUserProvider = ({ children }) => {
   }
 
   return (
-    <CurrentUserContext.Provider value={{ currentUser: userMe, setUserMe, onProfileInfoAvatar, onProfileInfo, onUpdateUser, onUpdateAvatar }}>
+    <CurrentUserContext.Provider value={{ currentUser: userMe, setUserMe, onProfileInfoAvatar, onProfileInfo, onUpdateUser, onUpdateAvatar, reloadUser }}>
       {children}
     </CurrentUserContext.Provider>
   );
