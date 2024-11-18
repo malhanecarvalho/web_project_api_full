@@ -9,7 +9,7 @@ const extractBearerToken = (header) => {
 module.exports = (req, res, next) => {
   const { authorization } = req.headers;
 
-  if (!authorization || !authorization.startsWith('Bearer ')) {
+  if (!authorization) {
     throw new UnauthorizedError({ statusCode: 401, message: 'Autorização ainda é necessária' });
   }
 
@@ -25,3 +25,5 @@ module.exports = (req, res, next) => {
 
   next();
 };
+
+//|| !authorization.startsWith('Bearer ')
