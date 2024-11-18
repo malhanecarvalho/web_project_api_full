@@ -9,10 +9,18 @@ const routerUser = require("./routes/users");
 const routerCards = require("./routes/cards");
 const routerAuth = require("./routes/auth");
 const bodyParser = require('body-parser');
+const User = require("./models/user");
+const Cards = require("./models/card");
 
 const app = express();
 app.use(cors());
 app.options('*', cors());
+
+async function ensureCollectionsExits() {
+  await User.init()
+  await Cards.init()
+  console.log("coleções criadas com sucesso");
+}
 
 async function connectMongoose() {
   await mongoose.connect("mongodb://localhost:27017/aroundb", {
@@ -29,7 +37,7 @@ async function connectMongoose() {
 const { PORT = 3000 } = process.env;
 
 
-connectMongoose();
+connectMongoose().then(ensureCollectionsExits).catch(console.error);
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
