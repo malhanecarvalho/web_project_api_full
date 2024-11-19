@@ -97,14 +97,13 @@ module.exports.login = (request, response, next) => {
     .then(({ user }) => {
       if (!user) {
         throw new BadRequestError({ statusCode: 400, message: 'Email ou senha incorretos' });
-      }else {
+      }
         response.status(200).json({
           userId: user._id,
           token: jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', {
             expiresIn: '7d'
           }),
         });
-      } 
     })
     .catch(next);
 };

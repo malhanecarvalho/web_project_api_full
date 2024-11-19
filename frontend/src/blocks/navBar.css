@@ -6,7 +6,7 @@
     justify-content: end;
 }
 
-.menu__item:hover{
+.menu__item:hover {
     opacity: 60%;
 }
 
@@ -18,7 +18,7 @@
     font-size: 18px;
     line-height: 22px;
     font-weight: 400;
-    text-align: right; 
+    text-align: right;
 }
 
 .menu__item:last-of-type {
@@ -34,7 +34,14 @@
     text-align: right;
 }
 
-.menu__button{
+.menu__text {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu__button {
     border: none;
     background-color: unset;
 }

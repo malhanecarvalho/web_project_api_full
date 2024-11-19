@@ -36,7 +36,7 @@ function Header({loggedIn, handleLogout}) {
     } else if (loggedIn) {
       return (
         <>
-         <span className="menu__item">{currentUser.email}</span>
+         <span className="menu__item menu__text">{currentUser.email}</span>
           <button onClick={signOut} className="menu__item menu__button">
             Sair
           </button>

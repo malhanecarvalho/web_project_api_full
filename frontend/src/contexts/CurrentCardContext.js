@@ -39,14 +39,11 @@ export const CurrentCardProvider = ({ children }) => {
       });
   };
 
-
   function handleSubmit(card, owner) {
     const dataCard = {
-      createdAt: new Date(),
-      likes: [],
       link: card.url,
       name: card.title,
-      owner: owner,
+      owner: owner._id,
     };
 
     api

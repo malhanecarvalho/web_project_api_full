@@ -19,7 +19,7 @@ app.options('*', cors());
 async function ensureCollectionsExits() {
   await User.init()
   await Cards.init()
-  console.log("coleções criadas com sucesso");
+  console.log("Coleções criadas com sucesso");
 }
 
 async function connectMongoose() {
