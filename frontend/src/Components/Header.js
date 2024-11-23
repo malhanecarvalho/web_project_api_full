@@ -4,11 +4,12 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import logo from '../images/logo-vector.png';
 import line from '../images/linha.jpg';
 
+
 function Header({loggedIn, handleLogout}) {
 
   const history = useHistory();
   const location = useLocation();
-  const { currentUser } = useContext(CurrentUserContext);
+  const { currentUser, setIsToken, setUserId } = useContext(CurrentUserContext);
 
   const isSignInPage = location.pathname === "/login";
   const isSignUpPage = location.pathname === "/register";
@@ -17,6 +18,7 @@ function Header({loggedIn, handleLogout}) {
     evt.preventDefault();
     handleLogout();
     localStorage.removeItem("Triple10");
+    localStorage.removeItem("userId");
     history.push("/login");
   }
 

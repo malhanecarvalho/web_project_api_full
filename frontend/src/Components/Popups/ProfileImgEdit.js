@@ -1,7 +1,7 @@
 import iconClose from "../../images/close-icon.png";
 import React, { useState, useEffect } from "react";
 
-function ProfileImgEdit({ onClose, classPopupEdit, onProfileAvatarChange }) {
+function ProfileImgEdit({ onClose, classPopupEdit, onProfileAvatarChange, onUpdateAvatar }) {
 
   const [image, setImage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -10,7 +10,7 @@ function ProfileImgEdit({ onClose, classPopupEdit, onProfileAvatarChange }) {
   const regexUrl = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
 
   useEffect(() => {
-   validateinputs("")
+    validateinputs("")
   }, [])
 
 
@@ -32,10 +32,11 @@ function ProfileImgEdit({ onClose, classPopupEdit, onProfileAvatarChange }) {
   }
 
   function handleSubmitAvatar(evt) {
-
     evt.preventDefault();
-    setImage("");
 
+    onUpdateAvatar({ avatar: image })
+    setImage("");
+    setDisabledButtonEditSubmit(true)
     onClose();
   }
 

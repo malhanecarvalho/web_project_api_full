@@ -18,7 +18,8 @@ class Api {
 
   getUserMe() {
     if (!this.id || this.id === "") {
-      return Promise.reject("id inválido ou vazio");
+      throw new Error("Missing Id");
+      return;
     }
     return fetch(`${this.baseUrl}/users/me/${this.id}`, {
       headers: {

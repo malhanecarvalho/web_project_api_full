@@ -15,6 +15,12 @@ export const CurrentUserProvider = ({ children }) => {
 
   const [userMe, setUserMe] = useState({});
 
+  useEffect(() => {
+    if (isToken) {
+      reloadUser()
+    }
+  }, [isToken]);
+
   function reloadUser() {
     api
       .getUserMe()
@@ -33,10 +39,6 @@ export const CurrentUserProvider = ({ children }) => {
       });
   }
 
-  useEffect(() => {
-      reloadUser();
-  }, []);
-
   function onProfileInfo(evt) {
     api
       .userEdit(evt.title, evt.about)
@@ -47,7 +49,7 @@ export const CurrentUserProvider = ({ children }) => {
         return Promise.reject(res.status);
       })
       .then((data) => {
-        setUserMe(data.user);
+        setUserMe(data);
       })
       .catch((err) => {
         console.log("Quebrou no GET /user");
@@ -114,7 +116,7 @@ export const CurrentUserProvider = ({ children }) => {
   }
 
   return (
-    <CurrentUserContext.Provider value={{ currentUser: userMe, setUserMe, onProfileInfoAvatar, onProfileInfo, onUpdateUser, onUpdateAvatar, reloadUser }}>
+    <CurrentUserContext.Provider value={{ currentUser: userMe, setUserMe, onProfileInfoAvatar, onProfileInfo, onUpdateUser, onUpdateAvatar }}>
       {children}
     </CurrentUserContext.Provider>
   );

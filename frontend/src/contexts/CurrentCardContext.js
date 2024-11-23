@@ -16,10 +16,12 @@ export const CurrentCardProvider = ({ children }) => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    reloadCards().then((data) => {
-      setCards(data);
-    });
-  }, []);
+    if (isToken) {
+      reloadCards().then((data) => {
+        setCards(data);
+      });
+    }
+  }, [isToken]);
 
   function reloadCards() {
     return api
@@ -122,7 +124,7 @@ export const CurrentCardProvider = ({ children }) => {
   }
 
   return (
-    <CurrentCardContext.Provider value={{ cards, setCards, addLike, removeLike, handleSubmit, handleDelete, reloadCards }}>
+    <CurrentCardContext.Provider value={{ cards, setCards, addLike, removeLike, handleSubmit, handleDelete }}>
       {children}
     </CurrentCardContext.Provider>
   );

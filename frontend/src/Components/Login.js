@@ -1,11 +1,9 @@
-//import React from "react";
 import React, { useState } from "react";
-import { Link, withRouter, useHistory } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import InfoTooltip from "./InfoToolTip";
 import * as auth from "../utils/auth";
 
 function Signin({ handleLogin }) {
-  const history = useHistory()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -67,11 +65,12 @@ function Signin({ handleLogin }) {
           return "Email ou senha inválidos"
         };
         const data = await response.json();
+        console.log(data)
         if (data.token) {
           handleLogin();
           localStorage.setItem("Triple10", data.token);
           localStorage.setItem("userId", data.userId);
-          history.push("/main")
+          window.location = "/"
         }
       }
     } catch (error) {

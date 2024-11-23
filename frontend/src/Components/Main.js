@@ -1,5 +1,5 @@
 
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext} from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import { CurrentCardContext } from "../contexts/CurrentCardContext";
 import iconEdit from "../images/edit-profile-photo-icon.png";
@@ -19,6 +19,7 @@ function Main() {
   const [isAddPlacePopupOpen, setisAddPlacePopupOpen] = useState(false);
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
   const [isPopupDeleteOpen, setIsPopupDeleteOpen] = useState(false);
+
   const classPopupImg = isOpen ? "popup-img-opened" : "";
   const classPopupProfile = isEditProfilePopupOpen ? "popup-opened" : "";
   const classPopupAddPlace = isAddPlacePopupOpen ? "popup-add-opened" : "";
@@ -33,7 +34,7 @@ function Main() {
     onUpdateAvatar,
   } = useContext(CurrentUserContext);
 
-  const { cards, addLike, removeLike, handleDelete, reloadCards } =
+  const { cards, addLike, removeLike, handleDelete } =
     React.useContext(CurrentCardContext);
 
   function onEditProfileClick() {

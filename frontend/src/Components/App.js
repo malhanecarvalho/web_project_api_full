@@ -31,7 +31,7 @@ function App() {
         const response = await auth.checkToken(isToken, userId);
         if (response.ok) {
           handleLogin();
-          history.push("/main");
+          history.push("/");
         }
       } catch (error) {
         console.error("Erro ao verificar token:", error);
@@ -54,12 +54,12 @@ function App() {
     <div className="page">
       <Header handleLogout={handleLogout} loggedIn={loggedIn} />
       <Switch>
-        <ProtectedRoute exact path="/main" loggedIn={loggedIn} component={Main} />
+        <ProtectedRoute exact path="/" loggedIn={loggedIn} component={Main} />
         <Route path="/register">
           <Register />
         </Route>
         <Route path="/login">
-          <Login handleLogin={handleLogin} loggedIn={loggedIn}/>
+          <Login handleLogin={handleLogin} loggedIn={loggedIn} />
         </Route>
       </Switch>
       <Footer />
